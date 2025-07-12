@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Live</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="display-flex">
+    <div id="weather-input" class="background-color">
+        <div id="weather-input-content">
+            <div id="search-box" class="display-flex">
+                <input type="text" placeholder="Country/City Name">
+                <select name="Unit" id="Unit">
+                    <option value="Cel">&deg;C</option>
+                    <option value="Frh">&deg;F</option>
+                </select>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="weather-icon"></div>
+            <h1 id="temperature"></h1>
+            <div id="feels-like"></div>
+            <hr>
+            <div id="date"></div>
+            <div id="city"></div>
+        </div>
+    </div>
+
+    <div id="weather-data">
+        <div id="weather-data-content">
+            <h2>Today's Highlights</h2>
+            <div id="todays-highlights" class="display-flex">
+                <div id="min-max-temp" class="background-color display-flex todays-weather-box">
+                    <div>Temperature</div>
+                    <h2>
+                        <span>Min : </span>
+                        <span id="min-temp">&deg;C</span>
+                    </h2>
+                    <h2>
+                        <span>Max : </span>
+                        <span id="max-temp">&deg;C</span>
+                    </h2>
+                </div>
+                <div id="humidity" class="background-color display-flex todays-weather-box">
+                    <div>Humidity</div>
+                    <i class="fa-solid fa-water"></i>
+                    <h2 id="humidity-value"></h2>
+                </div>
+                <div id="wind-speed" class="background-color display-flex todays-weather-box">
+                    <div>Wind Speed</div>
+                    <i class="fa-solid fa-wind"></i>
+                    <h2 id="wind-speed-value"></h2>
+                </div>
+                <div id="sunrise-sunset" class="background-color display-flex todays-weather-box">
+                    <div>
+                        <div id="sunrise" class="display-flex">
+                            <i class="fa-solid fa-sun"></i>
+                            <div>
+                                <div id="sunrise-time"></div>
+                                <div>Sunrise [IST]</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="sunset" class="display-flex">
+                            <i class="fa-regular fa-sun"></i>
+                            <div>
+                                <div id="sunset-time"></div>
+                                <div>Sunset [IST]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="clouds" class="background-color display-flex todays-weather-box">
+                    <div>Clouds</div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 id="clouds-value"></h2>
+                </div>
+                <div id="pressure" class="background-color display-flex todays-weather-box">
+                    <div>Pressure</div>
+                    <i class="fa-solid fa-volcano"></i>
+                    <h2 id="pressure-value"></h2>
+                </div>
+            </div>
+            <br>
+            <h2>This Week</h2>
+            <div id="this-week" class="display-flex">
+                <div class="background-color this-week-box"></div>
+                <div class="background-color this-week-box"></div>
+                <div class="background-color this-week-box"></div>
+                <div class="background-color this-week-box"></div>
+               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
